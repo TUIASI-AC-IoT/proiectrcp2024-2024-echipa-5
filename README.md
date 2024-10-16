@@ -69,5 +69,3 @@ Când un receptor primește un pachet PUBLISH cu QoS 2 de la un expeditor, acest
 
 
 
-
-
