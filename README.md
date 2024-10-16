@@ -39,10 +39,10 @@ MQTT livrează mesaje de aplicație conform nivelurilor de Calitate a Serviciulu
 
 **QoS 0: livrare cel mult o dată**
 La cel mai mic nivel, **QoS 0** în MQTT oferă “a best-effort delivery mechanism”, unde expeditorul nu așteaptă o confirmare sau o garanție a livrării mesajului. Astfel, destinatarul nu confirmă primirea mesajului, iar expeditorul nu îl stochează sau retransmite. QoS 0, denumit în mod obișnuit “fire and forget”, funcționează asemănător cu protocolul TCP subiacent, unde mesajul este trimis fără confirmări suplimentare.
-![QoS_0](https://imgur.com/F4xmste.png)
+![QoS_0](https://imgur.com/HvwXm9Q.png)
 **QoS 1: livrare cel puțin o dată**
 În **QoS 1** al MQTT, accentul este pus pe asigurarea livrării mesajului cel puțin o dată către receptor. Atunci când un mesaj este publicat cu QoS 1, expeditorul păstrează o copie a mesajului până când primește un pachet PUBACK de la receptor, confirmând primirea cu succes. Dacă expeditorul nu primește pachetul PUBACK într-un interval de timp rezonabil, retransmite mesajul pentru a asigura livrarea acestuia.
-![QoS_1](https://imgur.com/KiGqE6d.png)
+![QoS_1](https://imgur.com/1jKu3Tz.png)
 **QoS 2: livrare exact o dată**
 **QoS 2** oferă cel mai înalt nivel de serviciu în MQTT, asigurându-se că fiecare mesaj este livrat exact o dată destinatarilor intenționați. Pentru a atinge acest lucru, QoS 2 implică un schimb de mesaje în patru etape între expeditor și receptor.
 ![QoS_2](https://imgur.com/NXqrI9p.png)
