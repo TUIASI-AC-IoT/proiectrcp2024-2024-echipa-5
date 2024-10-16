@@ -33,7 +33,7 @@ Dacă valoarea Keep Alive este diferită de zero și serverul nu primește un pa
 
 Clientul trebuie să trimită un pachet PINGREQ către broker cel puțin o dată în cadrul acestui interval de timp pentru a indica prezența sa și a menține conexiunea activă. La primirea unui pachet PINGREQ, brokerul răspunde cu un pachet PINGRESP, confirmând că conexiunea este încă activă.
 
-# Quality of Service
+## Quality of Service
 MQTT livrează mesaje de aplicație conform nivelurilor de Calitate a Serviciului (**QoS**). Protocolul de livrare gestionează mesajele între un singur expeditor și un singur receptor. Când serverul trimite mesaje către mai mulți clienți, fiecare este gestionat independent.
 
 **QoS 0: livrare cel mult o dată**
@@ -47,9 +47,22 @@ La cel mai mic nivel, **QoS 0** în MQTT oferă “a best-effort delivery mechan
 
 Când un receptor primește un pachet PUBLISH cu QoS 2 de la un expeditor, acesta procesează mesajul publicat corespunzător și răspunde expeditorului cu un pachet PUBREC care confirmă primirea pachetului PUBLISH. Dacă expeditorul nu primește un pachet PUBREC de la receptor, acesta trimite din nou pachetul PUBLISH cu un flag de duplicat (DUP) până când primește o confirmare.
 ![QoS_2](https://imgur.com/NXqrI9p.png)
+
 ## Modul Socket
-**Modul socket** este o componentă fundamentală în rețelele de calculatoare care permite comunicația între două dispozitive (client și server) prin intermediul unei conexiuni de rețea.
+**Modul socket** este o componentă fundamentală în rețelele de calculatoare care permite comunicația între două dispozitive (client și server) prin intermediul unei conexiuni de rețea. **Berkeley Sockets** reprezintă o interfață standard pentru comunicația între aplicații în rețele de calculatoare. Când se implementează un client MQTT folosind Berkeley Sockets, se vor folosi socket-urile pentru a crea o conexiune TCP între client și broker, apoi se vor implementa manual pachetele MQTT (CONNECT, PUBLISH, SUBSCRIBE etc.).
+
+
 **Multithreading-ul** permite execuția simultană a mai multor fire de execuție (threads) într-o aplicație. Aceasta este utilă în aplicațiile care trebuie să efectueze sarcini paralele, cum ar fi publicarea și recepționarea mesajelor MQTT în același timp. Fiecare fir de execuție poate rula o parte a aplicației, permițând mai multe operațiuni să se desfășoare simultan.
 
 
-
+## Bibliografie
+[link1](https://docs.oasis-open.org/mqtt/mqtt/v5.0/mqtt-v5.0.html)
+[link2](https://www.hivemq.com/mqtt/)
+[link3](https://www.hivemq.com/mqtt/mqtt-5/)
+[link4](https://www.emqx.com/en/blog/the-ultimate-guide-to-mqtt-broker-comparison)
+[link5](https://docs.streamsets.com/platform-datacollector/latest/datacollector/UserGuide/Origins/MQTTSubscriber.html)
+[link6](https://dev.to/ably/publish-subscribe-introduction-to-scalable-messaging-2jo3) 
+[link7](http://www.steves-internet-guide.com/mqtt-works/)
+[link8](https://www.hivemq.com/blog/mqtt-essentials-part-6-mqtt-quality-of-service-levels/) 
+[link9](https://www.hivemq.com/blog/mqtt-security-fundamentals-tls-ssl/)
+[link_YT](https://www.youtube.com/watch?v=RPf_rr1ZDvE&list=PLRkdoPznE1ENuiniLpfNs4vSBFu19eNWh)
