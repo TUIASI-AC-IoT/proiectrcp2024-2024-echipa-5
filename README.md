@@ -48,24 +48,3 @@ La cel mai mic nivel, **QoS 0** în MQTT oferă “a best-effort delivery mechan
 ![QoS_2](https://imgur.com/NXqrI9p.png)
 Când un receptor primește un pachet PUBLISH cu QoS 2 de la un expeditor, acesta procesează mesajul publicat corespunzător și răspunde expeditorului cu un pachet PUBREC care confirmă primirea pachetului PUBLISH. Dacă expeditorul nu primește un pachet PUBREC de la receptor, acesta trimite din nou pachetul PUBLISH cu un flag de duplicat (DUP) până când primește o confirmare.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
