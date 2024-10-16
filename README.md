@@ -23,8 +23,8 @@ De exemplu, un topic ierarhic ar putea fi: dispozitive/senzori/temperatura
 
 **Autentificarea** face parte din securitatea la nivel de transport și aplicație în MQTT. Dacă se folosesc câmpurile de utilizator și parolă din pachetul MQTT CONNECT pentru mecanismele de autentificare și autorizare, utilizarea TLS asigură o securitate sporită (deși MQTT se bazează pe protocolul de transport TCP, care nu folosește comunicarea criptată).
 
-## Mecanisme 
-# KeepAlive
+# Mecanisme 
+## KeepAlive
 **Mecanismul Keep Alive** în MQTT asigură funcționarea conexiunii și oferă o modalitate pentru broker de a detecta dacă un client devine nefuncțional sau se deconectează. 
 
 **Keep Alive** este un întreg de două byte-uri care reprezintă un interval de timp măsurat în secunde. Acesta este timpul maxim permis care poate trece între momentul în care clientul finalizează transmiterea unui pachet de control MQTT și momentul în care începe să-l trimită pe următorul. Este responsabilitatea Clientului să se asigure că intervalul dintre pachetele de control MQTT trimise nu depășește valoarea Keep Alive. 
@@ -44,6 +44,12 @@ La cel mai mic nivel, **QoS 0** în MQTT oferă “a best-effort delivery mechan
 ![QoS_1](https://imgur.com/1jKu3Tz.png)
 **QoS 2: livrare exact o dată**
 **QoS 2** oferă cel mai înalt nivel de serviciu în MQTT, asigurându-se că fiecare mesaj este livrat exact o dată destinatarilor intenționați. Pentru a atinge acest lucru, QoS 2 implică un schimb de mesaje în patru etape între expeditor și receptor.
-![QoS_2](https://imgur.com/NXqrI9p.png)
+
 Când un receptor primește un pachet PUBLISH cu QoS 2 de la un expeditor, acesta procesează mesajul publicat corespunzător și răspunde expeditorului cu un pachet PUBREC care confirmă primirea pachetului PUBLISH. Dacă expeditorul nu primește un pachet PUBREC de la receptor, acesta trimite din nou pachetul PUBLISH cu un flag de duplicat (DUP) până când primește o confirmare.
+![QoS_2](https://imgur.com/NXqrI9p.png)
+## Modul Socket
+**Modul socket** este o componentă fundamentală în rețelele de calculatoare care permite comunicația între două dispozitive (client și server) prin intermediul unei conexiuni de rețea.
+**Multithreading-ul** permite execuția simultană a mai multor fire de execuție (threads) într-o aplicație. Aceasta este utilă în aplicațiile care trebuie să efectueze sarcini paralele, cum ar fi publicarea și recepționarea mesajelor MQTT în același timp. Fiecare fir de execuție poate rula o parte a aplicației, permițând mai multe operațiuni să se desfășoare simultan.
+
+
 
