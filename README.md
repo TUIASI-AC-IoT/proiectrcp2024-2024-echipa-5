@@ -37,12 +37,15 @@ Clientul trebuie să trimită un pachet PINGREQ către broker cel puțin o dată
 MQTT livrează mesaje de aplicație conform nivelurilor de Calitate a Serviciului (**QoS**). Protocolul de livrare gestionează mesajele între un singur expeditor și un singur receptor. Când serverul trimite mesaje către mai mulți clienți, fiecare este gestionat independent.
 
 **QoS 0: livrare cel mult o dată**
+
 La cel mai mic nivel, **QoS 0** în MQTT oferă “a best-effort delivery mechanism”, unde expeditorul nu așteaptă o confirmare sau o garanție a livrării mesajului. Astfel, destinatarul nu confirmă primirea mesajului, iar expeditorul nu îl stochează sau retransmite. QoS 0, denumit în mod obișnuit “fire and forget”, funcționează asemănător cu protocolul TCP subiacent, unde mesajul este trimis fără confirmări suplimentare.
 ![QoS_0](https://imgur.com/HvwXm9Q.png)
 **QoS 1: livrare cel puțin o dată**
+
 În **QoS 1** al MQTT, accentul este pus pe asigurarea livrării mesajului cel puțin o dată către receptor. Atunci când un mesaj este publicat cu QoS 1, expeditorul păstrează o copie a mesajului până când primește un pachet PUBACK de la receptor, confirmând primirea cu succes. Dacă expeditorul nu primește pachetul PUBACK într-un interval de timp rezonabil, retransmite mesajul pentru a asigura livrarea acestuia.
 ![QoS_1](https://imgur.com/1jKu3Tz.png)
 **QoS 2: livrare exact o dată**
+
 **QoS 2** oferă cel mai înalt nivel de serviciu în MQTT, asigurându-se că fiecare mesaj este livrat exact o dată destinatarilor intenționați. Pentru a atinge acest lucru, QoS 2 implică un schimb de mesaje în patru etape între expeditor și receptor.
 
 Când un receptor primește un pachet PUBLISH cu QoS 2 de la un expeditor, acesta procesează mesajul publicat corespunzător și răspunde expeditorului cu un pachet PUBREC care confirmă primirea pachetului PUBLISH. Dacă expeditorul nu primește un pachet PUBREC de la receptor, acesta trimite din nou pachetul PUBLISH cu un flag de duplicat (DUP) până când primește o confirmare.
