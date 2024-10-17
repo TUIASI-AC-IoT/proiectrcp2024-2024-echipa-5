@@ -59,13 +59,26 @@ Când un receptor primește un pachet PUBLISH cu QoS 2 de la un expeditor, acest
 
 
 ## Bibliografie
-[link1](https://docs.oasis-open.org/mqtt/mqtt/v5.0/mqtt-v5.0.html)
-[link2](https://www.hivemq.com/mqtt/)
-[link3](https://www.hivemq.com/mqtt/mqtt-5/)
-[link4](https://www.emqx.com/en/blog/the-ultimate-guide-to-mqtt-broker-comparison)
-[link5](https://docs.streamsets.com/platform-datacollector/latest/datacollector/UserGuide/Origins/MQTTSubscriber.html)
-[link6](https://dev.to/ably/publish-subscribe-introduction-to-scalable-messaging-2jo3) 
-[link7](http://www.steves-internet-guide.com/mqtt-works/)
-[link8](https://www.hivemq.com/blog/mqtt-essentials-part-6-mqtt-quality-of-service-levels/) 
-[link9](https://www.hivemq.com/blog/mqtt-security-fundamentals-tls-ssl/)
-[link_YT](https://www.youtube.com/watch?v=RPf_rr1ZDvE&list=PLRkdoPznE1ENuiniLpfNs4vSBFu19eNWh)
+https://docs.oasis-open.org/mqtt/mqtt/v5.0/mqtt-v5.0.html
+
+https://www.hivemq.com/mqtt/
+
+https://www.hivemq.com/mqtt/mqtt-5/
+
+https://www.emqx.com/en/blog/the-ultimate-guide-to-mqtt-broker-comparison
+
+https://docs.streamsets.com/platform-datacollector/latest/datacollector/UserGuide/Origins/MQTTSubscriber.html
+
+https://dev.to/ably/publish-subscribe-introduction-to-scalable-messaging-2jo3
+
+http://www.steves-internet-guide.com/mqtt-works/
+
+https://www.hivemq.com/blog/mqtt-essentials-part-6-mqtt-quality-of-service-levels/
+
+https://www.hivemq.com/blog/mqtt-security-fundamentals-tls-ssl/
+
+https://www.interviewbit.com/iot-interview-questions/
+
+https://docs.oracle.com/cd/E19455-01/806-5257/6je9h032e/index.html
+
+https://www.youtube.com/watch?v=RPf_rr1ZDvE&list=PLRkdoPznE1ENuiniLpfNs4vSBFu19eNWh
